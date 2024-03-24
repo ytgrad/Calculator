@@ -18,4 +18,6 @@
     <string name="plus">+</string>
     <string name="equals">=</string>
     <string name="dot">.</string>
+    <string name="percent">%</string>
+    <string name="ac">AC</string>
 </resources>
