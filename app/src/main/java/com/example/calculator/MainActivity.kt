@@ -6,50 +6,32 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.example.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private var tvOutput: TextView? = null
-    private var isLastDigit: Boolean = false
-    private var isLastDot: Boolean = false
+    private lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        tvOutput = findViewById(R.id.tvOutput)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
     fun onDigit(view: View) {
-        tvOutput?.append((view as Button).text)
-        isLastDigit = true
-        isLastDot = false
-        //Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
+
     }
 
     fun onClear(view: View) {
-        tvOutput?.text = ""
+
     }
 
     fun onDot(view: View) {
-        if (isLastDigit && !isLastDot) {
-            tvOutput?.append(".")
-        }
-        isLastDot = true
-        isLastDigit = false
+
     }
 
     fun onOperator(view: View) {
-        if (isLastDigit && !isOperatorAdded(tvOutput?.text.toString())) {
-            tvOutput?.append((view as Button).text)
-        }
-        isLastDigit = false
-        isLastDot = false
+
     }
 
-    private fun isOperatorAdded(value: String): Boolean {
-        return if (value.startsWith("-")) {
-            false
-        } else {
-            value.contains("+") || value.contains("-") || value.contains("x") || value.contains("/")
-        }
-    }
+
 }
