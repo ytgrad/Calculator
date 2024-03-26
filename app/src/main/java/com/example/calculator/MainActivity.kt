@@ -53,7 +53,12 @@ class MainActivity : AppCompatActivity() {
 
     fun onEqualClick(view: View) {
         onEqual()
-        binding.tvInput.text = binding.tvOutput.text.toString()
+        if(binding.tvOutput.text.toString().endsWith(".0")){
+            binding.tvInput.text = binding.tvOutput.text.toString().dropLast(2)
+        }else{
+            binding.tvInput.text = binding.tvOutput.text.toString()
+        }
+
     }
 
     fun onBackspace(view: View) {
