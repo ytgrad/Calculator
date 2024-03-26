@@ -20,4 +20,7 @@
     <string name="dot">.</string>
     <string name="percent">%</string>
     <string name="ac">AC</string>
+    <string name="x2">X</string>
+    <string name="mult">*</string>
+    <string name="c">C</string>
 </resources>

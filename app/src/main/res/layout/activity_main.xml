@@ -18,25 +18,24 @@
         <TextView
             android:id="@+id/tvInput"
             android:layout_width="match_parent"
-            android:text="56+76"
             android:layout_height="0dp"
             android:layout_weight="8"
             android:background="@color/light"
             android:gravity="bottom | end"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
             android:textColor="@color/darkest"
-            android:textSize="64sp" />
+            android:textSize="56sp" />
         <TextView
             android:id="@+id/tvOutput"
             android:layout_width="match_parent"
+            android:visibility="gone"
             android:layout_height="0dp"
-            android:text="6767"
             android:layout_weight="2"
             android:paddingEnd="10dp"
             android:gravity="bottom | end"
             android:background="@color/light"
             android:textColor="@color/darker"
-            android:textSize="56sp" />
+            android:textSize="48sp" />
 
     </LinearLayout>
 
@@ -61,23 +60,23 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/dark"
-                android:onClick="onClear"
+                android:onClick="onClearAll"
                 android:text="@string/ac"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 app:cornerRadius="15dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnPercent"
+                android:id="@+id/btnClear"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/dark"
-                android:onClick="onOperator"
-                android:text="@string/percent"
+                android:onClick="onClear"
+                android:text="@string/c"
                 android:textColor="@color/white"
-                android:textSize="32sp"
+                android:textSize="30sp"
                 app:cornerRadius="15dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -332,7 +331,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="2"
                 android:backgroundTint="@color/dark"
-                android:onClick="onOperator"
+                android:onClick="onEqualClick"
                 android:text="@string/equals"
                 android:textColor="@color/white"
                 android:textSize="32sp"
